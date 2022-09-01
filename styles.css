@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    color: #648813;
+    padding: 20px;
+    font-style: italic;
+
+}
+.part{
+    color: #a90409;
+}
+nav{
+    background-color: #088E07;
+    display: grid;
+    place-items: center;
+    position: sticky;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li{
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+    color: azure;
+    transition: 0.2s ease-in;
+}
+nav ul li a{
+    text-decoration: none;
+    color: azure;
+    transition: 0.2s ease-in;
+
+}
+nav a{
+    padding: 20px;
+    font-size: 18px;
+}
+nav ul li a:hover{
+background-color: azure;
+color: darkolivegreen;
+}
+
+.items{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 30px 20px;
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+}
+/*Optional down here*/
+.item{
+    background-color: #eee;
+}
+.item img{
+    
+    width: 80%;
+    height: 200px;
+    /**object fit is still under doubt*/
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.2s ease;
+    
+}
+.items .item img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item img:hover{
+    transform: scale(1.04);
+
+}
+.item h4{
+    padding: 5px;
+    text-align: center;
+
+}
+.item button{
+    padding: 5px 30px;
+    border: none;
+    outline: none;
+    background-color: #a90409;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 20px;
+    display: block;
+    margin: 0 auto;
+
+}
+.item button:hover{
+    transform: scale(1.06);
+}
+@media screen and (max-width: 1000px){
+    .items{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media screen and (max-width: 850px){
+    .items{
+        grid-template-columns: repeat(2,1fr);
+    }
+   
+}
+@media screen and (max-width:531px) {
+    .items{
+        grid-template-columns: repeat(1,1fr);
+    }
+    nav ul li{
+        display: inline-block;
+        padding: 0px;
+        text-decoration: none;
+        color: azure;
+        transition: 0.2s ease-in;
+    }
+}
